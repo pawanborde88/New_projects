@@ -1,0 +1,4 @@
+<div *ngFor="let banner of bannerList">
+  <img [src]="getImageUrl(banner)" alt="{{ banner.short_description }}">
+  <p>{{ banner.short_description }}</p>
+</div>
