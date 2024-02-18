@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { UpdatesComponent } from './updates/updates.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { HospitalComponent } from './Hospital_Project/hospital/hospital.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UpdatesComponent,
+    HospitalComponent,
 
   ],
   imports: [
