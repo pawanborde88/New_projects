@@ -1,0 +1,33 @@
+
+  <div class="heigh" style="height: 80px;"></div>
+  <div class="container-fluid bg-light">
+    <div class="container my-5">
+      <div class="row">
+        <h1 class="mb-5 text-center">
+          Our Upcoming Events
+         </h1>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="col-8 text-center">
+            <div class="card" *ngIf="singleEvent">
+              <img class="img-fluid card-img-top" src="{{storageUrl}}/{{singleEvent.event_image}}"
+                alt="{{ singleEvent.alt_tag }}">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="p-5 mt-4">
+            <h5 class="display-4">{{ singleEvent.event_title }}</h5>
+            <p class="lead">{{ singleEvent.event_description }} </p>
+            <h6><i class="pi pi-calendar"></i> {{singleEvent.event_date }}</h6>
+            <h6><i class="pi pi-clock"></i> {{singleEvent.start_time }} - {{singleEvent.end_time }}</h6>
+            <h6><i class="fa-solid fa-indian-rupee-sign"></i> {{singleEvent.price}}</h6>
+              <a class="bookbutton" routerLink="/booking">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+  </div>

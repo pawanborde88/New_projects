@@ -9,28 +9,22 @@ import { map } from 'rxjs/operators';
 })
 export class CommonService {
 
-  private GetBannerUrl = 'https://pw-bms-dev.portalwiz.in/laravelapi/public/api';
-  private apiUrl = 'https://pw-bms-dev.portalwiz.in/laravelapi/public/api';
-  private DeleteImage = 'https://pw-bms-dev.portalwiz.in/laravelapi/public/api';
-  private SingleImageFetch = 'https://pw-bms-dev.portalwiz.in/laravelapi/public/api';
-
+  private BannerUrl = 'https://pw-bms-dev.portalwiz.in/laravelapi/public/api';
   constructor(private http: HttpClient) {}
+
   fetchBanner(accountId: number): Observable<any> {
     const requestPayload = { account_id: accountId };
-    return this.http.post<any>(`${this.GetBannerUrl}/fetch_banner`, requestPayload);
+    return this.http.post<any>(`${this.BannerUrl}/fetch_banner`, requestPayload);
   }
 
 
-  addBanner(bannerData: any): Observable<any> {
-    return this.http.post<any>(`${this.apiUrl}/add_banner`, bannerData);
-  }
-
-  deleteBanner(bannerIds: number[]): Observable<any> {
-    const requestPayload = { banner_id: bannerIds };
-    return this.http.post<any>(`${this.DeleteImage}/delete_banner`, requestPayload);
-  }
-  fetchSingleBanner(bannerId: number): Observable<any> {
-    const requestPayload = { banner_id: bannerId };
-    return this.http.post<any>(`${this.SingleImageFetch}/fetch_single_banner`, requestPayload);
+  fetchSingleEvent(slug: string) {
+    return this.http.post(`${this.BannerUrl}/fetch_single_event`, {slug});
+   }
+  getAllEvents(accountId: number): Observable<any> {
+    const requestData = {
+      account_id: accountId,
+    };
+    return this.http.post(`${this.BannerUrl}/fetch_all_events`, requestData);
   }
 }

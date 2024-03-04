@@ -1,0 +1,158 @@
+.container-fluid {
+  background: linear-gradient(to bottom, rgb(0, 0, 0, 0.2), 70% white 100%);
+  /* background: rgb(0,0,0,0.2); */
+  background-color: line;
+  position: absolute;
+  z-index: 1000000;
+}
+
+
+
+.main-homepage {
+  display: flex;
+  text-align: center;
+  max-height: 80px;
+  min-height: 80px;
+  justify-content: space-between;
+}
+
+.main-homepage .second-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 60px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #f9f9f9;
+}
+.main-homepage .third-container {
+  display: flex;
+  align-items: center;
+
+}
+
+.main-homepage .third-container a {
+  margin: 5px;
+  padding: 7px 15px;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: #ff0000;
+  color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  border-radius: 20px;
+
+}
+
+.main-homepage .third-container .booknow {
+  margin: 5px;
+  padding: 7px 15px;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: #002aff;
+  color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  border-radius: 20px;
+  text-decoration: none;
+
+}
+
+@media(max-width:1100px) {
+  .main-homepage .second-container {
+    display: none;
+  }
+  .main-homepage .third-container {
+    display: none;
+  }
+  .main-homepage {
+    display: flex;
+    align-items: center;
+  }
+  .nav-link{
+    color: rgb(75, 14, 14);
+  }
+}
+
+@media(min-width:1100px) {
+  .four-container {
+    display: none;
+  }
+}
+.nav-link{
+  color: rgb(75, 14, 14);
+}
+.container nav {
+  display: none;
+}
+
+.container nav.open {
+  display: block;
+  /* additional styling for the open state */
+}
+/* Responsive */
+@media (max-width: 1199.5px) {
+
+  /* header */
+  .header_wrapper .navbar-nav .nav-link {
+    font-size: 1rem;
+  }
+
+
+
+}
+
+@media (max-width:991px) {
+  .header-scrolled {
+    height: auto;
+  }
+
+  .header_wrapper .menu-navbar-nav {
+    text-align: center;
+  }
+
+  .header_wrapper .nav-item .nav-link {
+    margin-top: .9375rem;
+  }
+}
+.third-container .booknow {
+  margin: 5px;
+  padding: 7px 15px;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: #002aff;
+  color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  border-radius: 20px;
+  text-decoration: none;
+
+}
+section {
+  display: table;
+}
+
+.example-label {
+  display: table-cell;
+  font-size: 14px;
+  margin-left: 8px;
+  min-width: 120px;
+}
+
+.example-button-row {
+  display: table-cell;
+  max-width: 600px;
+}
+
+.example-button-row .mat-mdc-button-base {
+  margin: 8px 8px 8px 0;
+}
+
+.example-flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.example-button-container {
+  display: flex;
+  justify-content: center;
+  width: 120px;
+}

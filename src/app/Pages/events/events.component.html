@@ -1,0 +1,29 @@
+<div class="container-fluid bg-light">
+  <div class="container">
+    <div class="row">
+      <h1 class="mb-5 text-center">
+        Our Upcoming Events
+       </h1>
+    </div>
+    <div class="row mt-5">
+      <div class="col-3" *ngFor="let event of events">
+        <div class="card mb-4" [routerLink]="['/single-event', event.slug]">
+          <img class="card-img-top" src="https://pw-bms-dev.portalwiz.in/laravelapi/storage/app/{{event.event_image}}"
+            alt={event.alt_tag} />
+          <div class="card-body">
+            <b>
+              <h5>{{event.event_title }}</h5>
+            </b>
+            <h6>{{event.event_category }}</h6>
+            <h4><i class="pi pi-calendar"></i> {{event.event_date }}</h4>
+            <h4><i class="pi pi-clock"></i> {{event.start_time }} - {{event.end_time }}</h4>
+            <h4><i class="fa-solid fa-indian-rupee-sign"></i> {{event.price}} Onwards</h4>
+            <div class="d-grid">
+              <a class="bookbutton" type="button">Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
